@@ -1,7 +1,7 @@
 package arrays.medium;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class SubArrayWithXor {
     public int solve(ArrayList<Integer> A, int B) {

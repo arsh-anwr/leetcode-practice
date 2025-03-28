@@ -1,20 +1,26 @@
-int n = arr.length; // size of the given array.
-        Map mpp = new HashMap();
-        int preSum = 0, cnt = 0;
+class Solution {
+    public int subarraysDivByK(int[] nums, int k) {
 
-        mpp.put(0, 1); // Setting 0 in the map.
-        for (int i = 0; i < n; i++) {
-        // add current element to prefix Sum:
-        preSum += arr[i];
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int n = nums.length;
+        int ans =0;
+        int sum =0;
+        int rem =0;
+        map.put(0,1);
 
-        // Calculate x-k:
-        int remove = preSum - k;
+        for(int i = 0; i < n; i++){
+            sum += nums[i];
+            rem = sum % k;
+            if(rem < 0)
+                rem += k;
 
-        // Add the number of subarrays to be removed:
-        cnt += mpp.getOrDefault(remove, 0);
-
-        // Update the count of prefix sum
-        // in the map.
-        mpp.put(preSum, mpp.getOrDefault(preSum, 0) + 1);
+            if(map.containsKey(rem)){
+                ans += map.get(rem);
+                map.put(rem, map.get(rem) + 1);
+            }else{
+                map.put(rem, 1);
+            }
         }
-        return cnt;
+        return ans;
+    }
+}

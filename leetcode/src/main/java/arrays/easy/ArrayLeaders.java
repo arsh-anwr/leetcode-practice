@@ -6,7 +6,8 @@ import java.util.Collections;
 public class ArrayLeaders {
 
 
-    //OPTIMAL APPROACH
+    //OPTIMAL APPROACH----------------------------------------------------------------------------------------------
+
     static ArrayList<Integer> leaders(int arr[]) {
         // code here
         ArrayList<Integer> ls = new ArrayList<>();

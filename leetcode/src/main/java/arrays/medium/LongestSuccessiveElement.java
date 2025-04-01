@@ -1,9 +1,8 @@
 package arrays.medium;
 
 import java.util.HashSet;
-import java.util.Set;
 
-public class LongestAdjacentArrayCount {
+public class LongestSuccessiveElement {
     //OPTIMAL APPROACH C++ ----------------------------------------------------------------------------------------
 
     /**

@@ -7,7 +7,7 @@ public class MaxValOfOrderdTriplt_I {
         int n = nums.length;
 
         long maxI = 0;
-        long maxDiff =0;
+        long maxDiff = 0;
         long result = 0;
 
         for(int m =0; m < n; m++){

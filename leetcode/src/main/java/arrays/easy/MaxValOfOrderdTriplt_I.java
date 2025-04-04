@@ -24,7 +24,7 @@ public class MaxValOfOrderdTriplt_I {
 
 
     //BETTER APPROACH---------------------------------------------------------------------------------------------------
-
+    /**
     public long maximumTripletValue(int[] nums) {
         int n = nums.length;
         int[] leftMax = new int[n];
@@ -45,12 +45,16 @@ public class MaxValOfOrderdTriplt_I {
 
         return result;
     }
+    */
 
 
 
 
 
     //BRUTE FORCE APPROACH----------------------------------------------------------------------------------------------
+
+    /**
+
 
     public long maximumTripletValue(int[] nums) {
         int n = nums.length;
@@ -67,4 +71,5 @@ public class MaxValOfOrderdTriplt_I {
 
         return maxVal;
     }
+     */
 }

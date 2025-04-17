@@ -1,4 +1,28 @@
-class Solution {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+class MajorityElementII {
+    //BETTER APPROACH---------------------------------------------------------------------------------------------------
+    public List<Integer> majorityElement(int[] nums) {
+        int n = nums.length;
+
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for(int num : nums) map.put(num, map.getOrDefault(num,0)+1);
+
+        List<Integer> result = new ArrayList<>();
+
+        for(int i : map.keySet()){
+            if(map.get(i) > n/3)
+                result.add(i);
+        }
+        return result;
+    }
+
+    //OPTIMAL APPROACH--------------------------------------------------------------------------------------------------
+    /**
     public List<Integer> majorityElement(int[] nums) {
         int maj1 = 0;
         int count1 = 0;
@@ -37,4 +61,5 @@ class Solution {
 
         return result;
     }
+     */
 }
